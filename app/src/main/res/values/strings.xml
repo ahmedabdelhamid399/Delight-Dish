@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Food Planner</string>
+    <string name="email" />
+    <string name="login">Login</string>
+    <string name="password" />
+    <string name="enter_name">Enter Your Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_have_an_account_log_in">Already have an account login</string>
+    <string name="enter_email">Enter Your Email</string>
+    <string name="enter_password">Enter Your Password</string>
+    <string name="content_description_pancakes">Pan Cake</string>
+    <string name="guest">Guest</string>
+    <string name="enter_at_least_8_characters">password at least 8 chars</string>
+    <string name="ahmed123_example_com">ahmed123@example.com</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="favorite">Favourite</string>
+    <string name="profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logout">Logout</string>
+    <string name="search_by_area">Search by Area</string>
+    <string name="search_by_category">Search by Category</string>
+    <string name="search_by_ingredients">Search by Ingredients</string>
+    <string name="favorite_meals">favourite Meals</string>
+    <string name="empty">empty</string>
+    <string name="name_of_meal">Name of Meal</string>
+    <string name="country">Country</string>
+    <string name="instructions">Instructions</string>
+    <string name="add_to_calendar">Add to Calendar</string>
+    <string name="ingredient_img">https://www.themealdb.com/images/ingredients/%s-Small.png</string>
+</resources>
