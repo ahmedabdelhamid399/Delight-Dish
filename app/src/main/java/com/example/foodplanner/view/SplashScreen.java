@@ -9,7 +9,7 @@ import android.os.Looper;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.example.foodplanner.R;
-import com.example.foodplanner.model.FirebaseRepository;
+import com.example.foodplanner.models.FirebaseRepository;
 
 public class SplashScreen extends AppCompatActivity {
     private LottieAnimationView lottieAnimationView;
@@ -24,22 +24,19 @@ public class SplashScreen extends AppCompatActivity {
         final Handler handler = new Handler(Looper.getMainLooper());
         handler.postDelayed(new Runnable() {
             @Override
-            public void run()
-            {
+            public void run() {
                 if(userID!=null){
-                    Intent intent = new Intent(SplashScreen.this, StartScreen.class);
+                    Intent intent = new Intent(SplashScreen.this, MainActivity.class);
                     startActivity(intent);
-
                 }
-                 else
+                else
                 {
-                    Intent intent = new Intent(SplashScreen.this, StartScreen.class);
+                    Intent intent = new Intent(SplashScreen.this, StartScreenActivity.class);
                     startActivity(intent);
                 }
-
             }
 //        }, 3500);
-        }, 3000);
+        }, 1800);
 
 
     }

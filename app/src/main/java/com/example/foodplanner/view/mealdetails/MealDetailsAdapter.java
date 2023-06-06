@@ -16,9 +16,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.foodplanner.R;
-import com.example.foodplanner.model.FirebaseRepository;
-import com.example.foodplanner.model.detailedmeal.DetailedMeal;
-import com.example.foodplanner.model.detailedmeal.IngredientWithMeasure;
+import com.example.foodplanner.models.FirebaseRepository;
+import com.example.foodplanner.models.detailedmeal.DetailedMeal;
+
+import com.example.foodplanner.models.detailedmeal.IngredientWithMeasure;
 
 import com.example.foodplanner.view.AddAndRemoveFavoriteViewInterface;
 
@@ -47,13 +48,13 @@ public class MealDetailsAdapter extends RecyclerView.Adapter<MealDetailsAdapter.
 
     @NonNull
     @Override
-    public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MealDetailsAdapter.Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_details, parent, false);
         return new Holder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Holder holder, int position) {
+    public void onBindViewHolder(@NonNull MealDetailsAdapter.Holder holder, int position) {
 
         DetailedMeal detailedMeal = detailedMealsList.get(position);
         holder.meal_name_tv.setText(detailedMeal.getStrMeal());

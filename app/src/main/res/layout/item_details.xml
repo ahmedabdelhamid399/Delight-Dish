@@ -20,6 +20,8 @@
                     android:contentDescription="@string/content_description_pancakes" />
                 -->
 
+
+
           <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/iv_details_food"
             android:layout_width="300dp"
@@ -86,6 +88,7 @@
             android:textColor="@color/black"
             android:text="@string/country"
             android:fontFamily="@font/itim_regular"
+
             android:textSize="24sp"
             android:textAllCaps="false"
             app:layout_constraintTop_toBottomOf="@+id/tv_details_name_of_meal"
@@ -98,8 +101,10 @@
             android:layout_height="wrap_content"
             android:padding="20dp"
             android:fontFamily="@font/itim_regular"
+
             android:text="@string/instructions"
             android:textSize="18sp"
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/video"
@@ -134,10 +139,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:drawableStart="@drawable/ic_calendar"
-            android:text="@string/add_to_calendar"
+            android:drawableStart="@drawable/ic_calender"
+            android:text=" Add to Calendar"
+            style="@style/mainButtons"
             android:fontFamily="@font/itim_regular"
-            android:textAllCaps="false"
             android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.foodplanner.R;
-import com.example.foodplanner.model.SimpleMeal;
+import com.example.foodplanner.models.SimpleMeal;
 import com.example.foodplanner.view.search.ParticularCategoryMealsActivityInterface;
 
 import java.util.ArrayList;
@@ -34,15 +34,16 @@ public class ParticularCategoryAdapter  extends RecyclerView.Adapter<ParticularC
 
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ParticularCategoryAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+    {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.item_with_favorite_btn, parent, false);
-        MyViewHolder myViewHolder = new MyViewHolder(view);
+        ParticularCategoryAdapter.MyViewHolder myViewHolder = new ParticularCategoryAdapter.MyViewHolder(view);
         return myViewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ParticularCategoryAdapter.MyViewHolder holder, int position) {
         Log.i(TAG, "onBindViewHolder: ");
         SimpleMeal current = meals.get(position);
         holder.meal_name_tv.setText(current.getStrMeal());
@@ -52,12 +53,8 @@ public class ParticularCategoryAdapter  extends RecyclerView.Adapter<ParticularC
                 .error(R.drawable.ic_broken_image)
                 .into(holder.meal_photo);
 
-        holder.meal_photo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                particularCategoryMealsActivityInterface.navigateToViewDetails(Long.toString(current.getIdMeal()));
-            }
-        });
+        holder.meal_photo.setOnClickListener(v ->
+                particularCategoryMealsActivityInterface.navigateToViewDetails(Long.toString(current.getIdMeal())));
     }
 
     @Override

@@ -1,9 +1,13 @@
 package com.example.foodplanner.network;
 
-import com.example.foodplanner.model.MealList;
-import com.example.foodplanner.model.detailedmeal.DetailedMealList;
-import com.example.foodplanner.model.search.RootCategories;
-import com.example.foodplanner.model.search.RootIngredients;
+import com.example.foodplanner.models.detailedmeal.DetailedMeal;
+import com.example.foodplanner.models.MealList;
+import com.example.foodplanner.models.search.Ingredient;
+import com.example.foodplanner.models.search.RootCategories;
+import com.example.foodplanner.models.search.RootIngredients;
+
+import java.util.ArrayList;
+import com.example.foodplanner.models.detailedmeal.DetailedMealList;
 
 import io.reactivex.rxjava3.core.Observable;
 import retrofit2.http.GET;
@@ -29,11 +33,4 @@ public interface RetrofitInterface {
 
     @GET("categories.php")
     Observable<RootCategories> getAllCategories();
-
-//    @GET("search.php?s=")
-//    Single<MealList> getMealInfoByName(@Query("s") String name);
-//    @GET("search.php")
-//    Single<MealList> searchMealName(@Query("s") String mealName);
-//    @GET("list.php?a=list")
-//    Single<MealList> getArea();
 }

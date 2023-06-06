@@ -1,5 +1,7 @@
 package com.example.foodplanner.view.search.adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -9,15 +11,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foodplanner.R;
-import com.example.foodplanner.model.search.Area;
+import com.example.foodplanner.models.search.Area;
 import com.example.foodplanner.view.search.AllAreasActivityInterface;
+import com.example.foodplanner.view.search.ParticularAreaMealActivity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AreaAdapter extends RecyclerView.Adapter<AreaAdapter.MyViewHolder> {
@@ -49,13 +54,7 @@ public class AreaAdapter extends RecyclerView.Adapter<AreaAdapter.MyViewHolder> 
 //        holder.photo.setImageResource(current.getImageResourceId());
                 holder.photo.setImageBitmap(
                 decodeSampledBitmapFromResource( holder.photo.getResources(), current.getImageResourceId(), 100, 80));
-        holder.wholeItem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allAreasActivityInterface.navigateToParticularAreaMeal(current.getAreaName());
-
-            }
-        });
+        holder.wholeItem.setOnClickListener(v -> allAreasActivityInterface.navigateToParticularAreaMeal(current.getAreaName()));
 
     }
 
@@ -75,8 +74,6 @@ public class AreaAdapter extends RecyclerView.Adapter<AreaAdapter.MyViewHolder> 
             wholeItem=itemView.findViewById(R.id.layout_whole_item);
             name=itemView.findViewById(R.id.area_name);
             photo=itemView.findViewById(R.id.area_image);
-
-
         }
     }
 
@@ -95,8 +92,7 @@ public class AreaAdapter extends RecyclerView.Adapter<AreaAdapter.MyViewHolder> 
             // Calculate the largest inSampleSize value that is a power of 2 and keeps both
             // height and width larger than the requested height and width.
             while ((halfHeight / inSampleSize) >= reqHeight
-                    && (halfWidth / inSampleSize) >= reqWidth)
-            {
+                    && (halfWidth / inSampleSize) >= reqWidth) {
                 inSampleSize *= 2;
             }
         }

@@ -1,15 +1,15 @@
 package com.example.foodplanner.view.calendar;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.foodplanner.R;
-import com.example.foodplanner.model.FirebaseRepository;
+import com.example.foodplanner.models.FirebaseRepository;
 import com.example.foodplanner.view.mealdetails.ViewDetailsActivity;
 
 import java.text.ParseException;

@@ -6,13 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bumptech.glide.Glide;
 import com.example.foodplanner.R;
-import com.example.foodplanner.model.SimpleMeal;
+import com.example.foodplanner.models.SimpleMeal;
+import com.example.foodplanner.view.search.AllAreasActivityInterface;
 import com.example.foodplanner.view.search.ParticularAreaMealActivityInterface;
 
 import java.util.ArrayList;
@@ -46,6 +45,7 @@ public class ParticularAreaAdapter extends RecyclerView.Adapter<ParticularAreaAd
         SimpleMeal current = meals.get(position);
         holder.meal_name_tv.setText(current.getStrMeal());
         holder.meal_id_tv.setText(Long.toString(current.getIdMeal()));
+
         //Glide.with(holder.meal_photo.getContext()).load(current.getStrMealThumb()).into(holder.meal_photo);
         Glide.with(holder.meal_photo.getContext())
                 .load(current.getStrMealThumb())
@@ -53,13 +53,8 @@ public class ParticularAreaAdapter extends RecyclerView.Adapter<ParticularAreaAd
                 .error(R.drawable.ic_broken_image)
                 .into(holder.meal_photo);
 
-        holder.meal_photo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                particularAreaMealActivityInterface.navigateToViewDetails(Long.toString(current.getIdMeal()));
-
-            }
-        });
+        holder.meal_photo.setOnClickListener(v ->
+                particularAreaMealActivityInterface.navigateToViewDetails(Long.toString(current.getIdMeal())));
     }
 
     @Override

@@ -1,22 +1,25 @@
 package com.example.foodplanner.view.search;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.foodplanner.R;
-import com.example.foodplanner.model.SimpleMeal;
+import com.example.foodplanner.models.SimpleMeal;
+import com.example.foodplanner.presenter.ParticularAreaMealPresenter;
 import com.example.foodplanner.presenter.ParticularCategoryMealsPresenter;
 import com.example.foodplanner.view.mealdetails.ViewDetailsActivity;
+import com.example.foodplanner.view.search.adapter.ParticularAreaAdapter;
 import com.example.foodplanner.view.search.adapter.ParticularCategoryAdapter;
 
 import java.util.ArrayList;
@@ -54,12 +57,7 @@ public class ParticularCategoryMealsActivity extends AppCompatActivity implement
         }
 
         closeScreen=findViewById(R.id.iv_close_search_by_particular_category);
-        closeScreen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        closeScreen.setOnClickListener(v -> finish());
 
 
         searchView=findViewById(R.id.sv_search_in_particular_area);
@@ -101,15 +99,13 @@ public class ParticularCategoryMealsActivity extends AppCompatActivity implement
     }
 
     @Override
-    public void getParticularCategoryMeals(String categoryName)
-    {
+    public void getParticularCategoryMeals(String categoryName) {
         ParticularCategoryMealsPresenter.getParticularCategoryMeals(categoryName ,this);
     }
 
     @Override
-    public void onSuccessResult(ArrayList<SimpleMeal> meals)
-    {
-        //send data to the adapter
+    public void onSuccessResult(ArrayList<SimpleMeal> meals) {
+        //send data to the adapter :D
         mealsByCategory.addAll(meals);
         displayList.addAll(meals);
         particularCategoryAdapter.setList(displayList);
@@ -130,6 +126,7 @@ public class ParticularCategoryMealsActivity extends AppCompatActivity implement
         editor = sharedPreferences.edit();
         editor.putString("mealcurrentid", position);
         editor.apply();
+
         Intent intent = new Intent(this, ViewDetailsActivity.class);
         startActivity(intent);
     }

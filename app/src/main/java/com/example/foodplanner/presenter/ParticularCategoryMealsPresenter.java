@@ -1,7 +1,9 @@
 package com.example.foodplanner.presenter;
 
-import com.example.foodplanner.model.SimpleMeal;
-import com.example.foodplanner.model.search.ParticularCategoryMealsRepository;
+import com.example.foodplanner.models.SimpleMeal;
+import com.example.foodplanner.models.search.ParticularAreaMealRepository;
+import com.example.foodplanner.models.search.ParticularCategoryMealsRepository;
+import com.example.foodplanner.view.search.ParticularAreaMealActivityInterface;
 import com.example.foodplanner.view.search.ParticularCategoryMealsActivityInterface;
 
 import java.util.ArrayList;

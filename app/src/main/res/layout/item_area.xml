@@ -38,7 +38,7 @@
             android:fontFamily="@font/itim_regular"
             android:maxLines="2"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/black_text"
             android:textSize="28sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

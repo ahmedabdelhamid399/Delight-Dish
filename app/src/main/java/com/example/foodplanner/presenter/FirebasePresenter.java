@@ -2,12 +2,12 @@ package com.example.foodplanner.presenter;
 
 import androidx.annotation.NonNull;
 
-import com.example.foodplanner.model.FirebaseRepositoryInterface;
-import com.example.foodplanner.model.SignupUser;
+import com.example.foodplanner.models.FirebaseRepositoryInterface;
+import com.example.foodplanner.models.SignupUser;
 import com.example.foodplanner.network.LogOutResult;
 import com.example.foodplanner.network.SignUpResult;
-import com.example.foodplanner.view.ProfileFragmentInterface;
 import com.example.foodplanner.view.signup.SignUpViewInterface;
+import com.example.foodplanner.view.ProfileFragmentInterface;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 

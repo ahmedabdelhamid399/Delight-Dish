@@ -15,7 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.foodplanner.R;
-import com.example.foodplanner.model.SimpleMeal;
+import com.example.foodplanner.models.SimpleMeal;
 
 import com.example.foodplanner.presenter.ParticularAreaMealPresenter;
 import com.example.foodplanner.view.mealdetails.ViewDetailsActivity;
@@ -59,12 +59,7 @@ public class ParticularAreaMealActivity extends AppCompatActivity implements Par
         }
 
         closeScreen=findViewById(R.id.iv_close_search_by_particular_area);
-        closeScreen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        closeScreen.setOnClickListener(v -> finish());
 
         searchView=findViewById(R.id.sv_search_in_particular_area);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -97,8 +92,6 @@ public class ParticularAreaMealActivity extends AppCompatActivity implements Par
                     displayList.addAll(mealsByArea);
                     particularAreaAdapter.setList(displayList);
                     particularAreaAdapter.notifyDataSetChanged();
-
-
                 }
 
                 return true;
@@ -118,9 +111,6 @@ public class ParticularAreaMealActivity extends AppCompatActivity implements Par
         displayList.addAll(meals);
         particularAreaAdapter.setList(displayList);
         particularAreaAdapter.notifyDataSetChanged();
-
-
-
     }
 
     @Override

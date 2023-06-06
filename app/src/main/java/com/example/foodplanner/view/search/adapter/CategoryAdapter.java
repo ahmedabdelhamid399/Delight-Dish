@@ -1,6 +1,9 @@
 package com.example.foodplanner.view.search.adapter;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +17,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.foodplanner.R;
-import com.example.foodplanner.model.search.Category;
+
+import com.example.foodplanner.models.SimpleMeal;
+import com.example.foodplanner.models.search.Category;
+
 import com.example.foodplanner.view.search.AllCategoriesActivityInterface;
 
 import java.util.ArrayList;
@@ -36,21 +42,19 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
 
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public CategoryAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Log.i(TAG, "onCreateViewHolder: ");
         LayoutInflater inflater=LayoutInflater.from(parent.getContext());
         View view=inflater.inflate(R.layout.item_area,parent,false);
-        MyViewHolder myViewHolder=new MyViewHolder(view);
+        CategoryAdapter.MyViewHolder myViewHolder=new CategoryAdapter.MyViewHolder(view);
         return myViewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CategoryAdapter.MyViewHolder holder, int position) {
         Log.i(TAG, "onBindViewHolder: ");
         Category current =categories.get(position);
         holder.name.setText(current.getStrCategory());
-
-
 
         Glide.with(context)
                 .load(current.getStrCategoryThumb())
@@ -58,13 +62,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
                 .error(R.drawable.ic_broken_image)
                 .into(holder.photo);
 
-        holder.wholeItem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                allCategoriesActivityInterface.navigateToParticularCategoryMeals(current.getStrCategory());
-
-            }
-        });
+        holder.wholeItem.setOnClickListener(v -> allCategoriesActivityInterface.navigateToParticularCategoryMeals(current.getStrCategory()));
 
     }
 

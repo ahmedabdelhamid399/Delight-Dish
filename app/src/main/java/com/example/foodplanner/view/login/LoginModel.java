@@ -1,53 +1,46 @@
 package com.example.foodplanner.view.login;
 
 import android.util.Patterns;
-import com.google.firebase.auth.FirebaseAuth;
 
-public class LoginModel
-{
-    private FirebaseAuth firebaseAuth;
+import androidx.annotation.NonNull;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+public class LoginModel {
+    private FirebaseAuth mAuth;
 
     public LoginModel() {
-        firebaseAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
     }
 
-    public void loginUser(String email, String password, final LoginListener listener)
-    {
-        firebaseAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(task ->
-                {
-                    if (task.isSuccessful())
-                    {
-                        String userId = firebaseAuth.getUid();
+    public void loginUser(String email, String password, final LoginListener listener) {
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        String userId = mAuth.getUid();
                         listener.onLoginSuccess(userId);
-                    }
-                    else
-                    {
+                    } else {
                         listener.onLoginError(task.getException().getMessage());
                     }
                 });
     }
 
-    private boolean isEmailValid(String email)
-    {
+    private boolean isEmailValid(String email) {
         return Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 
-    private boolean isPasswordValid(String password)
-    {
+    private boolean isPasswordValid(String password) {
         return password.length() >= 6;
     }
 
-    public boolean validateCredentials(String email, String password, final LoginListener listener)
-    {
-        if (!isEmailValid(email))
-        {
+    public boolean validateCredentials(String email, String password, final LoginListener listener) {
+        if (!isEmailValid(email)) {
             listener.onValidationError("Invalid email address");
             return false;
-        }
-        else if (!isPasswordValid(password))
-        {
-            listener.onValidationError("Password must be at least 6 characters");
+        } else if (!isPasswordValid(password)) {
+            listener.onValidationError("Password should be at least 6 characters");
             return false;
         }
         return true;

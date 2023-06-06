@@ -1,6 +1,6 @@
 package com.example.foodplanner.view.search;
 
-import com.example.foodplanner.model.SimpleMeal;
+import com.example.foodplanner.models.SimpleMeal;
 
 import java.util.ArrayList;
 

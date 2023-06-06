@@ -1,7 +1,8 @@
 package com.example.foodplanner.presenter;
 
-import com.example.foodplanner.model.search.AllCategoriesRepository;
-import com.example.foodplanner.model.search.Category;
+import com.example.foodplanner.models.search.AllCategoriesRepository;
+import com.example.foodplanner.models.search.AllIngredientsRepository;
+import com.example.foodplanner.models.search.Category;
 import com.example.foodplanner.view.search.AllCategoriesActivityInterface;
 
 import java.util.ArrayList;

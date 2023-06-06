@@ -11,7 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.foodplanner.R;
-import com.example.foodplanner.model.SimpleMeal;
+import com.example.foodplanner.models.SimpleMeal;
+import com.example.foodplanner.view.AddAndRemoveFavoriteViewInterface;
 
 import java.util.ArrayList;
 

@@ -3,9 +3,11 @@ package com.example.foodplanner.presenter;
 import android.content.Context;
 
 import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
 
-import com.example.foodplanner.model.FavoriteRepository;
-import com.example.foodplanner.model.detailedmeal.DetailedMeal;
+import com.example.foodplanner.models.FavoriteRepository;
+import com.example.foodplanner.models.SimpleMeal;
+import com.example.foodplanner.models.detailedmeal.DetailedMeal;
 import com.example.foodplanner.view.FavoriteFragmentInterface;
 
 import java.util.List;

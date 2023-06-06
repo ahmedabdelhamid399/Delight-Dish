@@ -9,9 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foodplanner.R;
-import com.example.foodplanner.model.detailedmeal.DetailedMeal;
-import com.example.foodplanner.model.FirebaseRepository;
-import com.example.foodplanner.model.detailedmeal.DetailedMealList;
+import com.example.foodplanner.models.detailedmeal.DetailedMeal;
+import com.example.foodplanner.models.FirebaseRepository;
+import com.example.foodplanner.models.detailedmeal.DetailedMealList;
 import com.example.foodplanner.network.RetrofitClient;
 import com.example.foodplanner.network.RetrofitInterface;
 import com.example.foodplanner.presenter.FavoritePresenter;

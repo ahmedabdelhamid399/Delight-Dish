@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'com.google.gms.google-services'
+    id 'androidx.navigation.safeargs'
 }
 
 android {
@@ -8,8 +9,8 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.ahmedabdelhamid.foodplanner"
-        minSdk 21
+        applicationId "com.example.foodplanner"
+        minSdk 24
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -23,11 +24,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
     buildFeatures{
         viewBinding = true
     }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -35,7 +34,6 @@ android {
 }
 
 dependencies {
-
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
@@ -43,30 +41,22 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    //Lottie Animation
+    //material dialog
+    implementation 'com.afollestad.material-dialogs:input:3.3.0'
+    //Lottie
     implementation "com.airbnb.android:lottie:5.2.0"
-
+    //material dialog
+    implementation 'com.afollestad.material-dialogs:input:3.3.0'
     // Navigation
     implementation 'androidx.navigation:navigation-fragment:2.5.3'
     implementation 'androidx.navigation:navigation-ui:2.5.3'
-
-    //Google Sign In
-    implementation 'com.google.android.gms:play-services-base:18.2.0'
-
+    
     //youtube
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.1.0'
 
     //glide
     implementation 'com.github.bumptech.glide:glide:4.15.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
-
-    // Firebase Authentication
-    implementation 'com.google.firebase:firebase-auth:22.0.0'
-
-    // Google Sign in
-    implementation platform('com.google.firebase:firebase-bom:31.2.2')
-    implementation 'com.google.android.gms:play-services-auth:20.5.0'
-    implementation 'com.google.firebase:firebase-analytics'
 
     //room
     implementation "androidx.room:room-runtime:2.5.1"
@@ -80,12 +70,14 @@ dependencies {
     //Rx Android
     implementation 'io.reactivex.rxjava3:rxjava:3.1.5'
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
-
     //Rx Room
     implementation "androidx.room:room-rxjava3:2.5.1"
-
     //Rx RetroFit
-    //implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
     implementation "com.github.akarnokd:rxjava3-retrofit-adapter:3.0.0"
 
+    // Firebase Authentication
+    implementation 'com.google.firebase:firebase-auth:22.0.0'
+    // Google Sign in
+    implementation platform('com.google.firebase:firebase-bom:31.2.2')
+    implementation 'com.google.android.gms:play-services-auth:20.5.0'
 }

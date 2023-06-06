@@ -10,16 +10,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.foodplanner.R;
-import com.example.foodplanner.model.detailedmeal.DetailedMeal;
+import com.example.foodplanner.models.SimpleMeal;
+import com.example.foodplanner.models.detailedmeal.DetailedMeal;
 import com.example.foodplanner.view.meal.OnMealClick;
 
 import java.util.List;
 
-public class FavoriteMealsAdapter extends RecyclerView.Adapter<FavoriteMealsAdapter.ViewHolder>{
+public class FavoriteMealsAdapter  extends RecyclerView.Adapter<FavoriteMealsAdapter.ViewHolder>{
     private Context context;
     private List<DetailedMeal> meals;
     private FavoriteFragmentInterface favoriteFragmentInterface;
@@ -55,13 +57,7 @@ public class FavoriteMealsAdapter extends RecyclerView.Adapter<FavoriteMealsAdap
                 .placeholder(R.drawable.loading_animation)
                 .error(R.drawable.ic_broken_image)
                 .into(holder.meal_photo);
-        holder.btnRemoveFromFavorite.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                favoriteFragmentInterface.removeMeal(currentMeal);
-            }
-        });
+        holder.btnRemoveFromFavorite.setOnClickListener(view -> favoriteFragmentInterface.removeMeal(currentMeal));
 
     }
 
@@ -86,13 +82,10 @@ public class FavoriteMealsAdapter extends RecyclerView.Adapter<FavoriteMealsAdap
             meal_id_tv = itemView.findViewById(R.id.dish_id);
             btnRemoveFromFavorite = itemView.findViewById(R.id.btn_remove_from_favorite);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (listOnClickItem != null)
-                    {
-                        listOnClickItem.onClickIndex(meal_id_tv.getText().toString());
-                    }
+            itemView.setOnClickListener(view -> {
+                if (listOnClickItem != null)
+                {
+                    listOnClickItem.onClickIndex(meal_id_tv.getText().toString());
                 }
             });
         }

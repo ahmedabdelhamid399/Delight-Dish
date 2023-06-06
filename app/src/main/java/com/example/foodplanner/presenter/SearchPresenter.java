@@ -1,7 +1,7 @@
 package com.example.foodplanner.presenter;
 
-import com.example.foodplanner.model.search.AllAreas;
-import com.example.foodplanner.model.search.Area;
+import com.example.foodplanner.models.search.AllAreas;
+import com.example.foodplanner.models.search.Area;
 
 import java.util.List;
 

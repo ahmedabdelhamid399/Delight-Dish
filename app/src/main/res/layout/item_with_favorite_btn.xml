@@ -26,7 +26,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:shapeAppearanceOverlay="@style/RoundCorner"
-            tools:src="@drawable/sample_img" />
+            tools:src="@drawable/test_img" />
 
         <TextView
             android:id="@+id/dish_name"
@@ -36,7 +36,7 @@
             android:textAlignment="center"
             android:fontFamily="@font/itim_regular"
             android:maxLines="2"
-            android:textColor="@color/black"
+            android:textColor="@color/black_text"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/dish_image"

@@ -1,6 +1,7 @@
 package com.example.foodplanner.view;
 
-import com.example.foodplanner.model.detailedmeal.DetailedMeal;
+import com.example.foodplanner.models.SimpleMeal;
+import com.example.foodplanner.models.detailedmeal.DetailedMeal;
 
 public interface AddAndRemoveFavoriteViewInterface {
     public void addMeal(DetailedMeal detailedMeal );

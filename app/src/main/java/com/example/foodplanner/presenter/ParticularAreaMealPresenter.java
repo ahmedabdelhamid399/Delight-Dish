@@ -1,10 +1,11 @@
 package com.example.foodplanner.presenter;
 
-import com.example.foodplanner.model.SimpleMeal;
-import com.example.foodplanner.model.search.ParticularAreaMealRepository;
+import com.example.foodplanner.models.SimpleMeal;
+import com.example.foodplanner.models.search.ParticularAreaMealRepository;
 import com.example.foodplanner.view.search.ParticularAreaMealActivityInterface;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ParticularAreaMealPresenter {
     private  static ParticularAreaMealActivityInterface particularAreaMealInterface;

@@ -15,10 +15,11 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foodplanner.R;
-import com.example.foodplanner.model.MealList;
-import com.example.foodplanner.model.SimpleMeal;
+import com.example.foodplanner.models.SimpleMeal;
+import com.example.foodplanner.models.MealList;
 import com.example.foodplanner.network.RetrofitClient;
 import com.example.foodplanner.network.RetrofitInterface;
+import com.example.foodplanner.presenter.FavoritePresenter;
 import com.example.foodplanner.view.meal.MealAdapter;
 import com.example.foodplanner.view.meal.MealBigAdapter;
 import com.example.foodplanner.view.meal.OnMealClick;
@@ -32,7 +33,8 @@ import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 import retrofit2.Retrofit;
 
-public class HomeFragment extends Fragment implements OnMealClick {
+public class HomeFragment extends Fragment implements OnMealClick
+{
     private RecyclerView recyclerViewFirst;
     private RecyclerView recyclerViewSecond;
     private MealAdapter adapter;
@@ -56,6 +58,7 @@ public class HomeFragment extends Fragment implements OnMealClick {
         retrofitInterface = retrofitClient.create(RetrofitInterface.class);
 
         initializeVariables(view);
+        //setListeners();
         apiFirstCall();
         apiSecondCall();
     }

@@ -1,5 +1,8 @@
 package com.example.foodplanner.view.signup;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -11,19 +14,15 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
+import com.example.foodplanner.view.MainActivity;
 import com.example.foodplanner.R;
-import com.example.foodplanner.model.FirebaseRepository;
+import com.example.foodplanner.models.FirebaseRepository;
 import com.example.foodplanner.presenter.FirebasePresenter;
 import com.example.foodplanner.presenter.FirebasePresenterInterface;
-import com.example.foodplanner.view.MainActivity;
 import com.example.foodplanner.view.login.LoginActivity;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
-
 import java.util.regex.Pattern;
 
 
@@ -44,27 +43,25 @@ public class SignUpActivity extends AppCompatActivity implements SignUpViewInter
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-
+       // android.content.Context context=getApplicationContext();
         //initialize ui
         textInputUsername = findViewById(R.id.til_signup_person_name);
         textInputEmail = findViewById(R.id.til_signup_email);
         textInputPassword = findViewById(R.id.til_signup_password);
         textInputConfirmPassword = findViewById(R.id.til_signup_confirm_password);
         goToLogin =findViewById(R.id.tv_signup_login);
-        progressBar= findViewById(R.id.signUp_progress_bar);
+        progressBar= findViewById(R.id.progress_bar);
+
 
         //create presenter obj
         firebasePresenterInterface = new FirebasePresenter(this, FirebaseRepository.getInstance(getApplicationContext()));
 
-        goToLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
-                startActivity(intent);
-            }
+        goToLogin.setOnClickListener(view -> {
+            Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
+            startActivity(intent);
         });
 
-        //textWatcher to observe user input... is it empty?
+        //textWatcher to observe user inputs and check if it is empty?
         textInputUsername.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -99,13 +96,16 @@ public class SignUpActivity extends AppCompatActivity implements SignUpViewInter
             public void afterTextChanged(Editable s) {
                 if (s.toString().isEmpty()) {
                     textInputEmail.setError("Field can't be empty");
+
                 }
+
             }
         });
 
         textInputPassword.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
             }
 
             @Override
@@ -119,6 +119,7 @@ public class SignUpActivity extends AppCompatActivity implements SignUpViewInter
                     textInputPassword.setError("Field can't be empty");
 
                 }
+
             }
         });
 
@@ -144,6 +145,7 @@ public class SignUpActivity extends AppCompatActivity implements SignUpViewInter
         });
 
     }
+
 
     private boolean validateUsername() {
         String usernameInput = textInputUsername.getEditText().getText().toString();
@@ -222,7 +224,6 @@ public class SignUpActivity extends AppCompatActivity implements SignUpViewInter
         }
     }
 
-
     @Override
     public void registerUser(String disPlayName, String email, String password, String confirmPassword) {
         firebasePresenterInterface.registerUser(disPlayName, email, password, confirmPassword);
@@ -241,7 +242,7 @@ public class SignUpActivity extends AppCompatActivity implements SignUpViewInter
     public void onFailureRegistrationView(@NonNull Task<AuthResult> task) {
         progressBar.setVisibility(View.GONE);
         Toast.makeText(this, (task.getException()).getMessage(), Toast.LENGTH_LONG).show();
-        Log.i("ONFailureRegistration", "onFailureRegistration: "+task.getException().getMessage());
+        Log.i("TAGonFailureRegistration", "onFailureRegistration: "+task.getException().getMessage());
 
     }
 }

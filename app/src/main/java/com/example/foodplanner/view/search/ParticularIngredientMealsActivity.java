@@ -14,7 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.foodplanner.R;
-import com.example.foodplanner.model.SimpleMeal;
+import com.example.foodplanner.models.SimpleMeal;
 import com.example.foodplanner.presenter.ParticularCategoryMealsPresenter;
 import com.example.foodplanner.presenter.ParticularIngredientMealsPresenter;
 import com.example.foodplanner.view.mealdetails.ViewDetailsActivity;
@@ -23,6 +23,7 @@ import com.example.foodplanner.view.search.adapter.ParticularIngredientAdapter;
 
 import java.util.ArrayList;
 import java.util.Locale;
+
 public class ParticularIngredientMealsActivity extends AppCompatActivity implements ParticularIngredientMealsActivityInterface {
     String ingredientName;
     TextView tvIngredient;
@@ -56,12 +57,7 @@ public class ParticularIngredientMealsActivity extends AppCompatActivity impleme
         }
 
         closeScreen=findViewById(R.id.close_ingredient_meals);
-        closeScreen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        closeScreen.setOnClickListener(v -> finish());
 
         searchView=findViewById(R.id.sv_search_by_particular_ingredient);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -93,6 +89,7 @@ public class ParticularIngredientMealsActivity extends AppCompatActivity impleme
                     particularIngredientAdapter.setList(displayList);
                     particularIngredientAdapter.notifyDataSetChanged();
                 }
+
                 return true;
             }
         });

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.StartScreen">
+    tools:context=".view.StartScreenActivity">
 
     <ImageView
         android:layout_width="fill_parent"
@@ -16,16 +17,22 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        style="@style/Headlines"
-        android:layout_width="281dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
         android:fontFamily="@font/itim_regular"
         android:gravity="center"
         android:text="@string/app_name"
-
+        android:textColor="@color/white"
+        android:shadowColor="@color/black_text"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="15"
+        android:textSize="40sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/btn_start_skip" />
 
     <Button
@@ -34,9 +41,13 @@
         android:layout_height="wrap_content"
         android:text="@string/guest"
         style="@style/GuestButton"
-        android:background="@drawable/rounded_background"
+        android:backgroundTint="#33C1E1C1"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/itim_regular"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintTop_toTopOf="@+id/guideline_top" />
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_middle"
@@ -64,14 +75,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.04" />
+        app:layout_constraintGuide_percent="0.1" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.94" />
+        app:layout_constraintGuide_percent="0.9" />
 
     <androidx.cardview.widget.CardView
 
@@ -85,7 +96,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            >
 
             <Button
                 android:id="@+id/btn_start_signup"
@@ -93,10 +105,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginEnd="50dp"
-                style="@style/Buttons"
+                style="@style/buttons"
                 android:background="@drawable/rounded_background"
                 android:text="@string/sign_up"
-
                 app:layout_constraintBottom_toTopOf="@+id/btn_start_login"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -110,7 +121,7 @@
                 android:text="@string/login"
                 android:layout_marginStart="50dp"
                 android:layout_marginEnd="50dp"
-                style="@style/Buttons"
+                style="@style/buttons"
                 android:background="@drawable/rounded_background"
                 app:layout_constraintBottom_toTopOf="@+id/btn_start_google"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -120,18 +131,18 @@
 
             <com.google.android.gms.common.SignInButton
                 android:id="@+id/btn_start_google"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                style="@style/RoundCorner"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_start_login" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

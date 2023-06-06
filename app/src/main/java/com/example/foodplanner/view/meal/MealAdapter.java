@@ -5,13 +5,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.foodplanner.R;
-import com.example.foodplanner.model.SimpleMeal;
+import com.example.foodplanner.models.SimpleMeal;
 
 import java.util.ArrayList;
 
@@ -45,8 +46,7 @@ public class MealAdapter extends RecyclerView.Adapter<MealAdapter.Holder> {
     }
 
 
-    public class Holder extends RecyclerView.ViewHolder implements View.OnClickListener
-    {
+    public class Holder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public ImageView meal_photo;
         public TextView meal_name_tv, meal_id_tv;
 
@@ -56,10 +56,13 @@ public class MealAdapter extends RecyclerView.Adapter<MealAdapter.Holder> {
             meal_name_tv = itemView.findViewById(R.id.dish_name);
             meal_id_tv = itemView.findViewById(R.id.dish_id);
 
-            itemView.setOnClickListener(view -> {
-                if (listOnClickItem != null)
-                {
-                    listOnClickItem.onClickIndex(meal_id_tv.getText().toString());
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (listOnClickItem != null)
+                    {
+                        listOnClickItem.onClickIndex(meal_id_tv.getText().toString());
+                    }
                 }
             });
         }

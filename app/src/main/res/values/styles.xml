@@ -7,7 +7,7 @@
         <item name="color">@color/white</item>
     </style>
 
-    <style name="Buttons">
+    <style name="buttons">
         <item name="backgroundTint">@color/white</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">20sp</item>
@@ -19,42 +19,24 @@
         <item name="android:layout_marginEnd">25dp</item>
     </style>
 
-    <style name="GreenButton">
-        <item name="backgroundTint">@color/green</item>
-        <item name="android:textColor">@color/greenText</item>
+    <style name="mainButtons">
+        <item name="backgroundTint">@color/orange</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
         <item name="fontFamily">@font/itim_regular</item>
         <item name="textAllCaps">false</item>
         <item name="android:layout_marginStart">25dp</item>
         <item name="android:layout_marginEnd">25dp</item>
     </style>
 
-    <style name="Round_Button">
-        <item name="backgroundTint">@color/white</item>
+    <style name="GuestButton">
+        <item name="backgroundTint">#EAE4C5</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">20sp</item>
         <item name="fontFamily">@font/itim_regular</item>
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">10dp</item>
-        <item name="color">@color/white</item>
         <item name="textAllCaps">false</item>
-        <item name="android:layout_marginStart">25dp</item>
-        <item name="android:layout_marginEnd">25dp</item>
-    </style>
-
-    <style name="Round_Button_Main">
-        <item name="backgroundTint">@color/white</item>
-        <item name="android:textColor">@color/Ripple</item>
-        <item name="android:textSize">30sp</item>
-        <item name="fontFamily">@font/itim_regular</item>
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">10dp</item>
-        <item name="color">@color/white</item>
-        <item name="android:textStyle">bold</item>
-        <item name="textAllCaps">false</item>
-        <item name="android:layout_marginStart">25dp</item>
-        <item name="android:layout_marginEnd">25dp</item>
     </style>
 
     <style name="Headlines">
@@ -64,12 +46,15 @@
         <item name="fontFamily">@font/itim_regular</item>
     </style>
 
-    <style name="GuestButton">
-        <item name="backgroundTint">#EAE4C5</item>
+    <style name="textBox">
+        <item name="backgroundTint">@color/white</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">20sp</item>
         <item name="fontFamily">@font/itim_regular</item>
+        <item name="android:textStyle">bold</item>
         <item name="textAllCaps">false</item>
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:layout_marginEnd">5dp</item>
     </style>
 
 </resources>

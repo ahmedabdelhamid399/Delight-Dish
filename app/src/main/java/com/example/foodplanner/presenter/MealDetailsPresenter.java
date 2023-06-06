@@ -1,7 +1,7 @@
 package com.example.foodplanner.presenter;
 
-import com.example.foodplanner.model.detailedmeal.DetailedMeal;
-import com.example.foodplanner.model.detailedmeal.MealDetailsRepository;
+import com.example.foodplanner.models.detailedmeal.DetailedMeal;
+import com.example.foodplanner.models.detailedmeal.MealDetailsRepository;
 import com.example.foodplanner.view.mealdetails.MealDetailsInterface;
 
 public class MealDetailsPresenter {

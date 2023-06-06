@@ -1,6 +1,5 @@
 package com.example.foodplanner.presenter;
 
-public interface LoginPresenterInterface
-{
+public interface LoginPresenterInterface {
     void loginUser(String email, String password);
 }
