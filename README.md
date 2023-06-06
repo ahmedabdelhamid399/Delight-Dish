@@ -15,3 +15,14 @@
 
 <p>With these features, our application provides a comprehensive platform for browsing and discovering new meals, as well as organizing and saving your favorite recipes. Whether you're a professional chef or a beginner in the kitchen, food planner app made for everyone!</p>
 
+<hr>
+<h2>Used Technologies:</h2>
+
+* Java
+* MVP Arch Pattern
+* RX JAVA
+* Retrofit
+* Room DB
+* Lottie animation
+* TheMeal_DB API
+* Firebase_Auth
