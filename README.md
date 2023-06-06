@@ -1,7 +1,7 @@
-# Delicious Dish
+# Delight Dish
 
 --------------
-"Delicious Dish" is a native Android mobile application that uses Java to help users plan their weekly meals. 
+"Delight Dish" is a native Android mobile application that uses Java to help users plan their weekly meals. 
 <br>It enables users to view a variety of dishes from around the world and provides the ability to view categories, suggest meals, and search for specific meals using various options.
 
 Application Features:
@@ -31,15 +31,3 @@ Application Features:
 * Firebase_Auth
 
 
-
-
-
-<h2> - Add to Calender</h2>
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/51149273/222993674-d163aa96-7c39-461f-a9fa-3aff246ca003.jpg" width="30%">
-  &nbsp; &nbsp;
-  <img src="https://user-images.githubusercontent.com/51149273/222993675-7cf225e3-5565-49aa-9084-e78e3be5dbd2.jpg" width="30%">
-  &nbsp; &nbsp;
-  <img src="https://user-images.githubusercontent.com/51149273/222993676-1ea0cfa4-4b57-48b5-8eec-3dbfd0201bb2.jpg" width="30%">
-</p>
-<hr>
