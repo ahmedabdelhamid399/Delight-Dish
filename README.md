@@ -1,33 +1,17 @@
 # Delight Dish
 
---------------
-"Delight Dish" is a native Android mobile application that uses Java to help users plan their weekly meals. 
-<br>It enables users to view a variety of dishes from around the world and provides the ability to view categories, suggest meals, and search for specific meals using various options.
+<h2>Features</h2>
 
-Application Features:
---------------------
-* Splash Screen & Lottie animation.
-* Login and Register (with simple email and password or with google).
-* The user can also choose to remain anonymous and enter as guest by pressing the skip button.
-* After Sign up the user can view a multitude of meals in the home page for inspiration.
-* Clicking on any meal opens a detailed view with instructions, ingredients and a video that explains how to prepare it.
-* Users can search for meals by country or category or ingredient list.
-* Opening any meal in search allows the user to see it in a detailed view.
-* Logged in users can also add meals to their favourites and view them later. 
-* or add the meal to the Calendar and get notified about the meals at a later date.
-* User can save favorite meals to browse it later on even without network connectivity.
+<ul>
+  <li>Splash Screen with Lottie animation</li>
+  <li>Login and Register (with email and password or using Google sign in {Gmail})</li>
+  <li>Enter as a Guest by pressing the Guest button</li>
+  <li>Multiple meals displayed on the home page for daily inspiration</li>
+  <li>Detailed view of meals with instructions, ingredients, and a video tutorial</li>
+  <li>Search for meals by country, category, or ingredient list</li>
+  <li>Add meals to favorites and view them later in favorites page even without network connectivity</li>
+  <li>Add meals to the Calendar and get notified about them at a customaized date</li>
+</ul>
 
-
-<hr>
-<h2>Used Technologies:</h2>
-
-* Java
-* MVP Arch Pattern
-* RX JAVA
-* Retrofit
-* Room DB
-* Lottie animation
-* TheMeal_DB API
-* Firebase_Auth
-
+<p>With these features, our application provides a comprehensive platform for browsing and discovering new meals, as well as organizing and saving your favorite recipes. Whether you're a professional chef or a beginner in the kitchen, food planner app made for everyone!</p>
 
