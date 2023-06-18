@@ -16,7 +16,7 @@
 <p>With these features, our application provides a comprehensive platform for browsing and discovering new meals, as well as organizing and saving your favorite recipes. Whether you're a professional chef or a beginner in the kitchen, food planner app made for everyone!</p>
 
 <hr>
-## Used Technologies:
+## Used Technologies
 
 * Java
 * MVP Arch Pattern
