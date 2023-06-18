@@ -13,6 +13,8 @@
   <li>Add meals to the Calendar and get notified about them at a customized date</li>
 </ul>
 
+## Check The Video For The Delight-Dish App On Linked In Here [Delight-Dish](https://www.linkedin.com/feed/update/urn:li:activity:7072010629317898240/)
+
 ## Used Technologies
 
 * Java
