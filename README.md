@@ -47,7 +47,7 @@ Experience popular meals from different countries around the world. The applicat
 
 Save your favorite meals for quick and easy access. Users can add meals to their favorites or remove them as needed. The application employs local storage using Room, ensuring that favorite meals are readily available even without an internet connection.
 
-### Weekly Meal Plan
+### Add To Calendar
 
 Plan your meals for the week ahead with the **Add To Calendar** feature. Users can view and add meals to their Calendar, providing an organized approach to meal preparation and ensuring a well-balanced diet.
 
