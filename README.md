@@ -1,6 +1,6 @@
 # Delight Dish
 
-<h2>Features</h2>
+## Main Features
 
 <ul>
   <li>Splash Screen with Lottie animation</li>
@@ -9,13 +9,10 @@
   <li>Multiple meals displayed on the home page for daily inspiration</li>
   <li>Detailed view of meals with instructions, ingredients, and a video tutorial</li>
   <li>Search for meals by country, category, or ingredient list</li>
-  <li>Add meals to favorites and view them later in favorites page even without network connectivity</li>
-  <li>Add meals to the Calendar and get notified about them at a customaized date</li>
+  <li>Add meals to favorites and view them later on favorites page even without network connectivity</li>
+  <li>Add meals to the Calendar and get notified about them at a customized date</li>
 </ul>
 
-<p>With these features, our application provides a comprehensive platform for browsing and discovering new meals, as well as organizing and saving your favorite recipes. Whether you're a professional chef or a beginner in the kitchen, food planner app made for everyone!</p>
-
-<hr>
 ## Used Technologies
 
 * Java
@@ -28,11 +25,11 @@
 * Firebase_Auth
 
 
-  ## Features
+  ## Features in Details
 
 ### Meal of the Day
 
-Get inspired by exploring a different meal suggestion every day. The **Meal of the Day** feature presents users with an arbitrary meal choice to provide them with new ideas for their weekly meal plans.
+Get inspired by exploring different meal suggestions every day. The **Daily Inspiration** feature presents users with an arbitrary meal choice to provide them with new ideas for their weekly meal plans.
 
 ### Meal Search
 
@@ -60,7 +57,7 @@ Even without network connectivity, **Healthy Habit** allows users to access thei
 
 ### Authentication
 
-Securely authenticate to access additional features and personalize your experience. **Healthy Habit** offers simple login and sign-up functionality. Users can choose to authenticate using their social networking accounts such as Facebook, Google, or Twitter. Firebase Authentication is utilized to streamline the login process.
+Securely authenticate to access additional features and personalize your experience. **Delight Dish** offers simple login and sign-up functionality. Users can choose to authenticate using their social networking accounts such as Facebook, Google, or Twitter. Firebase Authentication is utilized to streamline the login process.
 
 ### Guest Mode
 
