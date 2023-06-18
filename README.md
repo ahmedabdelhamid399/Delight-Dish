@@ -25,7 +25,7 @@
 * Firebase_Auth
 
 
-  ## Features in Details
+## Features in Details
 
 ### Meal of the Day
 
