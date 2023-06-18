@@ -9,7 +9,7 @@
   <li>Multiple meals displayed on the home page for daily inspiration</li>
   <li>Detailed view of meals with instructions, ingredients, and a video tutorial</li>
   <li>Search for meals by country, category, or ingredient list</li>
-  <li>Add meals to favorites and view them later on favorites page even without network connectivity</li>
+  <li>Add meals to favorites and view them later on the favorites page even without network connectivity</li>
   <li>Add meals to the Calendar and get notified about them at a customized date</li>
 </ul>
 
@@ -49,11 +49,11 @@ Save your favorite meals for quick and easy access. Users can add meals to their
 
 ### Weekly Meal Plan
 
-Plan your meals for the week ahead with the **Weekly Meal Plan** feature. Users can view and add meals to their weekly meal plan, providing an organized approach to meal preparation and ensuring a well-balanced diet.
+Plan your meals for the week ahead with the **Add To Calendar** feature. Users can view and add meals to their Calendar, providing an organized approach to meal preparation and ensuring a well-balanced diet.
 
 ### Offline Support
 
-Even without network connectivity, **Healthy Habit** allows users to access their favorite meals and view their current week's meal plan. This offline support ensures that users can manage their meals seamlessly, regardless of their internet connection status.
+Even without network connectivity, **Delight Dish** allows users to access their favorite meals and view their current week's meal plan. This offline support ensures that users can manage their meals seamlessly, regardless of their internet connection status.
 
 ### Authentication
 
