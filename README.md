@@ -1,5 +1,7 @@
 # Delight Dish
 
+## Check The Demo's Video For The Delight-Dish App --> [Delight-Dish](https://www.linkedin.com/feed/update/urn:li:activity:7072010629317898240/)
+
 ## Main Features
 
 <ul>
@@ -13,8 +15,6 @@
   <li>Add meals to the Calendar and get notified about them at a customized date</li>
 </ul>
 
-## Check The Video For The Delight-Dish App On LinkedIn [Delight-Dish](https://www.linkedin.com/feed/update/urn:li:activity:7072010629317898240/)
-
 ## Used Technologies
 
 * Java
@@ -25,7 +25,6 @@
 * Lottie animation
 * TheMeal_DB API
 * Firebase_Auth
-
 
 ## Features in Details
 
